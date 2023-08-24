@@ -1,0 +1,20 @@
+# Apply general license
+! Files:"*"
+  Copyright=~"s/Lagendijk/Lagendijk \<llagendijk\@sourceforge.net\>/"
+  License short_name="GPL-2+"
+
+# Fix wrong detections
+! Files:"bjnp.c" License short_name="GPL-2+"
+
+# Add missing licenses
+! Files:"INSTALL"
+  License short_name=FSFAP
+  full_license="Copying and distribution of this file, with or without modification, are
+permitted in any medium without royalty provided the copyright notice and
+this notice are preserved.  This file is offered as-is, without warranty of
+any kind."
+
+! Files:"configure"
+  License short_name=FSFUL
+  full_license="This configure script is free software; the Free Software Foundation
+gives unlimited permission to copy, distribute and modify it."
