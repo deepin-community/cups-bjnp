@@ -1,0 +1,35 @@
+# Here's how I configured my Canon PIXMA MP560 printer using bjnp over wifi:
+############################################################################
+
+# 1) Turn the printer on, enable wifi
+
+# 2) Run bjnp to list active BJNP-listening printers on the local network
+$ /usr/lib/cups/backend/bjnp
+network bjnp://CANON-MP560.local:8611 "Canon MP560 series" "Canon MP560 series CANON-MP560.local" "MFG:Canon;CMD:BJL,BJRaster3,BSCCe,NCCe,IVEC,IVECPLI;SOJ:TXT01,BJNP2;MDL:MP560 series;CLS:PRINTER;DES:Canon MP560 series;VER:1.040;STA:10;FSI:00;HRI:PAM;MSI:DAT,E3,HFSF;PDR:3;"
+
+# 3) Find an appropriate driver/PPD for the printer on the system
+$ sudo lpinfo --make-and-model MP560 -m
+foomatic:Canon-MULTIPASS-MP560-gutenprint-ijs-simplified.5.2.ppd Canon MULTIPASS-MP560 Foomatic/gutenprint-ijs-simplified.5.2
+foomatic:Canon-MULTIPASS-MP560-gutenprint-ijs.5.2.ppd Canon MULTIPASS-MP560 Foomatic/gutenprint-ijs.5.2
+gutenprint.5.2://bjc-MULTIPASS-MP560/expert Canon PIXMA MP560 - CUPS+Gutenprint v5.2.9
+
+# 4) Create the printer in CUPS, enable it, and set it as the default
+$ sudo lpadmin -p CanonMP560 -v bjnp://CANON-MP560.local:8611 -D "Canon MP560 series" -m gutenprint.5.2://bjc-MULTIPASS-MP560/expert
+$ sudo cupsaccept CanonMP560
+$ sudo cupsenable CanonMP560
+$ sudo lpadmin -d CanonMP560
+
+# 5) Looks good
+$ lpstat -t
+scheduler is running
+system default destination: CanonMP560
+device for CanonMP560: bjnp://CANON-MP560.local:8611
+CanonMP560 accepting requests since Sat 08 Dec 2012 12:33:45 PM EST
+printer CanonMP560 is idle.  enabled since Sat 08 Dec 2012 12:33:45 PM EST
+	Ready to print.
+
+# 6) Print a test page
+$ lp /usr/share/doc/cups-backend-bjnp/README.Debian
+request id is CanonMP560-20 (1 file(s))
+
+# 7) Celebrate

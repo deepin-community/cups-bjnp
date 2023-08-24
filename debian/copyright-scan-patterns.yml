@@ -1,0 +1,10 @@
+---
+ignore:
+  pattern:
+  - AUTHORS
+  - ChangeLog
+  - Makefile.am
+  - NEWS
+  - TODO
+  - acinclude.m4
+  - config.h.in

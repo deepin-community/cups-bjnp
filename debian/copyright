@@ -1,22 +1,61 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: cups-bjnp
+Source: https://cups-bjnp.sourceforge.net/
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
+Copyright: 2008-2020, Louis Lagendijk <llagendijk@sourceforge.net>
+  2007, Apple Inc.
+  1997-2007, Easy Software Products
+  1996-2018, Free Software Foundation, Inc.
 License: GPL-2+
- This package is free software; you can redistribute it and/or modify
+
+Files: INSTALL
+Copyright: 1994-1996, 1999-2002, 2004-2016, Free Software Foundation
+License: FSFAP
+ Copying and distribution of this file, with or without modification, are
+  permitted in any medium without royalty provided the copyright notice and
+  this notice are preserved.  This file is offered as-is, without warranty of
+  any kind.
+
+Files: Makefile.in
+Copyright: 1994-2018, Free Software Foundation, Inc.
+License: GPL-2+
+
+Files: aclocal.m4
+Copyright: 1996-2018, Free Software Foundation, Inc.
+License: FSFULLR
+ This file is free software; the Free Software Foundation
+ gives unlimited permission to copy and/or distribute it,
+ with or without modifications, as long as this notice is preserved.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+ even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE.
+
+Files: configure
+Copyright: 1992-1996, 1998-2012, Free Software Foundation, Inc.
+License: FSFUL
+ This configure script is free software; the Free Software Foundation
+  gives unlimited permission to copy, distribute and modify it.
+
+Files: debian/*
+Copyright: 2012, Joe Nahmias <jello@debian.org>
+License: GPL-2
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ the Free Software Foundation; version 2 dated June, 1991.
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ On Debian systems, the complete text of version 2 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-2'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 dated June, 1991, or (at
+ your option) any later version.
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ On Debian systems, the complete text of version 2 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-2'.
